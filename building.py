@@ -61,13 +61,13 @@ class Building:
 
     def add_foundation(self):
         foundation_spr = Sprite(load_image("building/foundation.png"))
-        foundation_spr.set_location(vec3(3, 3, 0))
+        foundation_spr.set_location(vec3(-3, -3, 0))
         self.sprites.append(foundation_spr)
 
     def add_base(self):
         base_spr = Sprite(load_image("building/base.png"))
         base_spr.set_layer(Layer.OBJECTS_LAYER)
-        base_spr.set_location(vec3(3, 3, 0))
+        base_spr.set_location(vec3(-3,-3, 0))
         self.sprites.append(base_spr)
 
     def add_floors(self):
@@ -81,21 +81,21 @@ class Building:
                 floor_img = load_image("building/floor.png")
             floor_spr = Sprite(floor_img)
             floor_spr.set_layer(Layer.OBJECTS_LAYER)
-            floor_spr.set_location(vec3(3, 3, y))
+            floor_spr.set_location(vec3(-3,-3, y))
             self.sprites.append(floor_spr)
         return y
 
     def add_roof(self, y):
         roof_spr = Sprite(load_image("building/roof.png"))
         roof_spr.set_layer(Layer.OBJECTS_LAYER)
-        roof_spr.set_location(vec3(3, 3, y + 1))
+        roof_spr.set_location(vec3(-3, 33, y + 1))
         self.sprites.append(roof_spr)
 
     def make_helipad(self):
         y = self.level
         self.helipad = Sprite(load_image("building/helipad.png"))
         self.helipad.set_layer(Layer.OBJECTS_LAYER)
-        self.helipad.set_location(vec3(3, 3, y + 0.01))
+        self.helipad.set_location(vec3(-3, -3, y + 0.01))
         self.view.add_sprite(self.helipad)
 
     def destroy_helipad(self):

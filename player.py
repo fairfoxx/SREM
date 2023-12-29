@@ -5,7 +5,7 @@ class Player:
 
     def __init__(self, main):
         self.main = main
-        self.funds = 10000
+        self.funds = 1000000000
         self.income_sound = load_sound("money_collect.wav")
         self.monthly_listeners = []
 

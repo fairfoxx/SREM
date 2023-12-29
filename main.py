@@ -71,7 +71,7 @@ def display_startup_dropdown():
     label.pack()
 
     selected_size = StringVar()
-    selected_size.set("600x800")
+    selected_size.set("600x600")
 
     screen_dropdown = OptionMenu(tk, selected_size, *screen_options)
     screen_dropdown.pack()
@@ -83,7 +83,7 @@ def display_startup_dropdown():
     label.pack()
 
     selected_style = StringVar()
-    selected_style.set("Vector")
+    selected_style.set("Pixelated")
 
     style_dropdown = OptionMenu(tk, selected_style, *style_options)
     style_dropdown.pack()
